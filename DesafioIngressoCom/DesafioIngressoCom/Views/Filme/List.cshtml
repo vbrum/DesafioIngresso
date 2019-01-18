@@ -1,0 +1,51 @@
+﻿@model IEnumerable<DesafioIngressoCom.Models.Filme>
+
+<h2>Filmes</h2>
+<button onclick="location.href='/Filme/Add'" type="button" style='width: 85px' class="btn btn-default">Novo</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Gênero</th>
+            <th>Versão</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+
+                    @item.Id
+
+                </td>
+                <td>
+
+                    @item.Titulo
+
+                </td>
+                <td>
+
+                    @item.Genero
+
+                </td>
+                <td>
+
+                    @item.Versao
+
+                </td>
+                <td>
+
+                    <button onclick="location.href='/Filme/Details/@item.Id'" type="button" style='width: 85px' class="btn btn-default">Detalhar</button>
+                    <button onclick="location.href='/Filme/Edit/@item.Id'" type="button" style='width: 85px' class="btn btn-default">Atualizar</button>
+                    <button onclick="location.href='/Filme/Delete/@item.Id'" type="button" style='width: 85px' class="btn btn-default">Deletar</button>
+
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,23 @@
+﻿@model DesafioIngressoCom.Models.Sala
+@{ ViewBag.Title = "Adicionar Sala";}
+
+<div class="container">
+    <h1>@ViewBag.Title</h1>
+    <hr>
+    <form asp-controller="Sala" asp-action="Add" method="post" class="form-horizontal" role="form">
+        <div class="form-horizontal">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <label asp-for="NomeSala" style="padding:15px 0px 0px 0px">Nome</label>
+            <input asp-for="NomeSala" class="form-control" style="padding-top:15px; padding-bottom:15px;" />
+            <span asp-validation-for="NomeSala" class="text-danger"></span>
+
+            <label asp-for="Capacidade" style="padding-top:15px">Capacidade</label>
+            <input asp-for="Capacidade" class="form-control" style="padding-top:15px; padding-bottom:15px;" />
+            <span asp-validation-for="Capacidade" class="text-danger"></span>
+
+            <div style="padding:15px 0px 15px 0px">
+                <input type="submit" value="Incluir" class="btn btn-default" />
+            </div>
+        </div>
+    </form>
+</div>

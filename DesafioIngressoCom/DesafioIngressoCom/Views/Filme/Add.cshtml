@@ -1,0 +1,27 @@
+﻿@model DesafioIngressoCom.Models.Filme
+@{ ViewBag.Title = "Adicionar Filme";}
+    
+<div class="container">
+    <h1>@ViewBag.Title</h1>
+    <hr>
+    <form asp-controller="Filme" asp-action="Add" method="post" class="form-horizontal" role="form">
+        <div class="form-horizontal">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <label asp-for="Titulo" style="padding:15px 0px 0px 0px">Título</label>
+            <input asp-for="Titulo" class="form-control" style="padding-top:15px; padding-bottom:15px;" />
+            <span asp-validation-for="Titulo" class="text-danger"></span>
+
+            <label asp-for="Genero" style="padding-top:15px">Gênero</label>
+            <input asp-for="Genero" class="form-control" style="padding-top:15px; padding-bottom:15px;" />
+            <span asp-validation-for="Genero" class="text-danger"></span>
+
+            <label asp-for="Versao" style="padding-top:15px">Versão</label>
+            <input asp-for="Versao" class="form-control" style="padding-top:15px; padding-bottom:15px;" />
+            <span asp-validation-for="Versao" class="text-danger"></span>
+            <div style="padding:15px 0px 15px 0px">
+                <input type="submit" value="Incluir" class="btn btn-default" />
+            </div>
+        </div>
+    </form>
+</div>
+    

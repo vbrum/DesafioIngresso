@@ -1,0 +1,46 @@
+﻿@model IEnumerable<DesafioIngressoCom.Models.Sala>
+
+<h2>Salas</h2>
+<button onclick="location.href='/Sala/AddToCinema'" type="button" style='width: 85px' class="btn btn-default">Novo</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Capacidade</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+
+                    @item.Id
+
+                </td>
+                <td>
+
+                    @item.NomeSala
+
+                </td>
+                <td>
+
+                    @item.Capacidade
+
+                </td>
+                <td></td>
+
+                <td>
+
+                    <button onclick="location.href='Sala/Details/@item.Id'" type="button" style='width: 85px' class="btn btn-default">Detalhar</button>
+                    <button onclick="location.href='Sala/Edit/@item.Id'" type="button" style='width: 85px' class="btn btn-default">Atualizar</button>
+                    <button onclick="location.href='Sala/Delete/@item.Id'" type="button" style='width: 85px' class="btn btn-default">Deletar</button>
+
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,34 @@
+﻿@model DesafioIngressoCom.Models.Sessao
+
+<h2>Detalhe</h2>
+<table class="table" style="border:none; font-size: medium">
+    <tr>
+        <th style="border:none" width="70">Id:</th>
+        <td style="border:none">@Model.Id</td>
+
+    </tr>
+    <tr>
+        <th style="border:none">Nome:</th>
+        <td style="border:none">@Model.Nome</td>
+    </tr>
+    <tr>
+        <th style="border:none">Dia:</th>
+        <td style="border:none">@Model.Date</td>
+    </tr>
+    <tr>
+        <th style="border:none">Hora:</th>
+        <td style="border:none">@Model.Time</td>
+    </tr>
+    <tr>
+        <th style="border:none">Título:</th>
+        <td style="border:none"><a href="/Filme/Details/@Model.Filme.Id">@Model.Filme.Titulo</a></td>
+    </tr>
+    <tr>
+        <th style="border:none">Versão:</th>
+        <td style="border:none">@Model.Filme.Versao</td>
+    </tr>
+</table>
+
+<form>
+    <input type="button" value="Voltar" onclick="history.back()" style='width: 85px' class="btn btn-default">
+</form>

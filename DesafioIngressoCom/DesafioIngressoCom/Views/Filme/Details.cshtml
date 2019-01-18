@@ -1,0 +1,31 @@
+﻿@model DesafioIngressoCom.Models.Filme
+
+<h2>Detalhe</h2>
+<table class="table" style="border:none; font-size: medium">
+    <tr>
+        <th style="border:none" width="70">Id:</th>
+        <td style="border:none">@Model.Id</td>
+
+    </tr>
+    <tr>
+        <th style="border:none">Titulo:</th>
+        <td style="border:none">@Model.Titulo</td>
+    </tr>
+    <tr>
+        <th style="border:none">Gênero:</th>
+        <td style="border:none">@Model.Genero</td>
+    </tr>
+    <tr>
+        <th style="border:none">Versão:</th>
+        <td style="border:none">@Model.Versao</td>
+    </tr>
+</table>
+
+<form>
+    <input type="button" value="Voltar" onclick="history.back()" style='width: 85px'class="btn btn-default">
+</form>
+           
+ 
+
+
+

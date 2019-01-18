@@ -1,0 +1,50 @@
+﻿@model DesafioIngressoCom.Models.Cinema
+
+<h2>Detalhe</h2>
+<table class="table" style="border:none; font-size: medium">
+    <tr>
+        <th style="border:none" width="70">Id:</th>
+        <td style="border:none">@Model.Id</td>
+
+    </tr>
+    <tr>
+        <th style="border:none">Nome:</th>
+        <td style="border:none">@Model.Nome</td>
+    </tr>
+    <tr>
+        <th style="border:none">Gênero:</th>
+        <td style="border:none">@Model.Local</td>
+    </tr>
+    <tr>
+        <th style="border:none">Salas:</th>
+        <td style="border:none">
+            @foreach (var item in Model.Salas)
+            {
+                @if (Model.Salas.Last() == item)
+                {
+                    <a href="/Sala/Details/@item.Id">@item.NomeSala</a>
+                }
+                else
+                {
+                    <a href="/Sala/Details/@item.Id">@item.NomeSala</a> <span>&#44;</span>
+                }
+
+            }
+
+        </td>
+        
+    </tr>
+</table>
+
+<form>
+    <input type="button" value="Voltar" onclick="history.back()" style='width: 85px' class="btn btn-default">
+    <a href='@Url.Action("Add", "Sala", Model)'>
+        <input type="button" value="Adicionar Sala" class="btn btn-default" />
+    </a>
+</form>
+
+
+
+
+
+

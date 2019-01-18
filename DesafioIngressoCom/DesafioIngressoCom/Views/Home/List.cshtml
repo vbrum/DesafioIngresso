@@ -1,0 +1,59 @@
+﻿<h2>Consultas</h2>
+<table class="table">
+    <tr>
+        <td>
+            <a href="/Filme/ListAll">Listar todos os filmes</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href='@Url.Action("ListPerGenre", "Filme", new { genero = "Ação" })'>Listar filmes de ação</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href='@Url.Action("ListPerGenre", "Filme", new { genero = "Aventura" })'>Listar filmes de aventura</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href='@Url.Action("ListPerVersion", "Filme", new { versao = "Legendado" })'>Listar filmes legendados</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href='@Url.Action("ListPerVersion", "Filme", new { versao = "Dublado" })'>Listar filmes dublados</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href='@Url.Action("ListPerVersionAndGenre", "Filme", new { versao = "Legendado" , genero = "Ação"})'>Listar filmes de ação legendados</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href='@Url.Action("ListPerVersionAndGenre", "Filme", new { versao = "Dublado" , genero = "Ação"})'>Listar filmes de ação dublados</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href='@Url.Action("ListPerVersionAndGenre", "Filme", new { versao = "Legendado" , genero = "Aventura" })'>Listar filmes de aventura legendados</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href='@Url.Action("ListPerVersionAndGenre", "Filme", new { versao = "Dublado" , genero = "Aventura" })'>Listar filmes de aventura dublados</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/Sessao/ListAll">Listar todas as sessões</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href='@Url.Action("ListPerMovie", "Sessao", new { titulo = "Os Vingadores"})'>Listar sessões do filme Os Vingadores</a>
+        </td>
+    </tr>
+</table>
+

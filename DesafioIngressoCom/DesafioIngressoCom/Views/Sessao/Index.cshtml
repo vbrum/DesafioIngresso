@@ -1,0 +1,66 @@
+﻿@model IEnumerable<DesafioIngressoCom.Models.Sessao>
+
+<h2>Sessões</h2>
+<button onclick="location.href='/Sessao/Add'" type="button" style='width: 85px' class="btn btn-default">Novo</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Data</th>
+            <th>Hora</th>
+            <th>Sala</th>
+            <th>Filme</th>
+            <th>Versão</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+
+                    @item.Id
+
+                </td>
+                <td>
+
+                    @item.Nome
+
+                </td>
+                <td>
+
+                    @item.Date
+
+                </td>
+                <td>
+
+                    @item.Time
+
+                </td>
+                @if (@item.Sala != null)
+                {
+                    <td><a href="/Sala/Details/@item.Sala.Id">@item.Sala.NomeSala</a></td>
+                }
+                else
+                {
+                    <td></td>
+                }
+
+                <td><a href="/Filme/Details/@item.Filme.Id">@item.Filme.Titulo</a></td>
+                <td>@item.Filme.Versao</td>
+                <td>
+
+                    <button onclick="location.href='/Sessao/Details/@item.Id'" type="button" style='width: 85px' class="btn btn-default">Detalhar</button>
+                    <button onclick="location.href='/Sessao/Edit/@item.Id'" type="button" style='width: 85px' class="btn btn-default">Atualizar</button>
+                    <button onclick="location.href='/Sessao/Delete/@item.Id'" type="button" style='width: 85px' class="btn btn-default">Deletar</button>
+
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+

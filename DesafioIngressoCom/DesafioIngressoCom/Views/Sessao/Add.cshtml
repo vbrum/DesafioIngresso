@@ -1,0 +1,43 @@
+﻿@model DesafioIngressoCom.Models.Sessao
+@{ ViewBag.Title = "Adicionar Sessao";}
+
+<div class="container">
+    <h1>@ViewBag.Title</h1>
+    <hr>
+    <form asp-controller="Sessao" asp-action="Add" method="post" class="form-horizontal" role="form">
+        <div class="form-horizontal">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <label asp-for="Nome" style="padding:15px 0px 0px 0px">Nome</label>
+            <input asp-for="Nome" class="form-control" style="padding-top:15px; padding-bottom:15px;" />
+            <span asp-validation-for="Nome" class="text-danger"></span>
+
+            <label asp-for="Date" style="padding-top:15px">Data</label>
+            <input asp-for="Date" class="form-control" style="padding-top:15px; padding-bottom:15px;" />
+            <span asp-validation-for="Date" class="text-danger"></span>
+
+            <label asp-for="Time" style="padding-top:15px">Hora</label>
+            <input asp-for="Time" class="form-control" style="padding-top:15px; padding-bottom:15px;" />
+            <span asp-validation-for="Time" class="text-danger"></span>
+            <label asp-for="Sala" style="padding-top:15px"></label>
+            <select id="testSelect2" name="testeSelect2" class="form-control">
+                <option value=""></option>
+                @foreach (var item in ViewBag.Salas)
+                {
+                    <option value="@item.Id">@item.NomeSala</option>
+                }
+            </select>
+            <label asp-for="Filme" style="padding-top:15px"></label>
+            <select id="testSelect" name="testeSelect" class="form-control">
+                <option value=""></option>
+                @foreach (var item in ViewBag.Filmes)
+                {
+                    <option value="@item.Id">@item.Titulo</option>
+                }
+            </select>
+            
+            <div style="padding:15px 0px 15px 0px">
+                <input type="submit" value="Incluir" class="btn btn-default" />
+            </div>
+        </div>
+    </form>
+</div>

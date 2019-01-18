@@ -4,7 +4,7 @@ Nessa aplicação, fiz uso do MongoDB 4.0.5 e para poder visualizar os dados uti
 Após fazer o download e instalar o MongoDB, sugiro que configure a variável de ambiente PATH com o caminho onde o MongoDB foi instalado.
 O caminho que coloquei em PATH foi esse: C:\Program Files\MongoDB\Server\4.0\bin 
 
-Verificar se o MongoDB criou o diretório (C:\data\db), crie se não existir, pois pode ocorrer algum erro quando tentar colocar o servidor no ar pela ausência desse diretório.
+Verificar se o MongoDB criou o diretório (C:\data\db). Crie se não existir, pois pode ocorrer algum erro quando tentar colocar o servidor no ar pela ausência desse diretório.
 
 O comando para colocar o servidor no ar através do cmd é mongod.
 
